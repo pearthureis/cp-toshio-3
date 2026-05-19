@@ -19,7 +19,11 @@ int main(){
     system("cls");
     exibirMenu();
     scanf("%d", &opcao);
-    } while(opcao != 0);
-    printf("Obrigado por usar nosso ATM!");
-
+    } while(opcao >=0 && opcao <= 3);
+    if (opcao > 3 || opcao < 0){
+        system("cls");
+        printf("valor digitado invalido!! \n");
+        exibirMenu();
+        scanf("%d", &opcao);
+    }
 }
